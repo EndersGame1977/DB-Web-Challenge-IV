@@ -5,7 +5,16 @@ const recipe = require("./recipe-module.js");
 const router = express.Router();
 
 // All recipes (without details about ingredients or steps)
-router.get("/", (req, res) => {});
+router.get("/", (req, res) => {
+  recipe
+    .getRecipes()
+    .then(recipes => {
+      res.status(200).json(recipes);
+    })
+    .catch(err => {
+      res.status(500).json({ message: err.message });
+    });
+});
 
 // A list of ingredients and quantites for a single recipe
 router.get("/:id/shoppingList", (req, res) => {});
