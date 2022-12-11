@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/EndersGame1977/DB-Web-Challenge-IV#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "knex": "^0.19.4",
     "knex-cleaner": "^1.3.0",
     "nodemon": "^1.19.2",
